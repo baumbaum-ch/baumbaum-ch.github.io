@@ -4,20 +4,31 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Frischer Süssmost – Ernte 2025</title>
+
+  <!-- Google Fonts (ähnlich Gotham) -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
+
   <style>
+    :root {
+      --green-dark: #4d680f;
+      --green-light: #8cb345;
+      --white: #ffffff;
+    }
+
     body {
-      font-family: "Helvetica Neue", Arial, sans-serif;
-      background-color: #faf8f5;
-      color: #333;
+      font-family: 'Montserrat', sans-serif;
+      background-color: var(--white);
+      color: var(--green-dark);
       margin: 0;
       padding: 0;
       line-height: 1.6;
     }
 
     header {
-      background-color: #e4f3e0;
+      background: linear-gradient(135deg, var(--green-light), var(--green-dark));
+      color: var(--white);
       text-align: center;
-      padding: 2.5rem 1rem;
+      padding: 3rem 1rem;
     }
 
     header img {
@@ -26,15 +37,15 @@
     }
 
     header h1 {
-      font-size: 2rem;
-      color: #2b552e;
-      margin: 0.3rem 0;
+      font-size: 2.2rem;
+      margin: 0.5rem 0;
+      font-weight: 700;
     }
 
     header p {
       font-size: 1.2rem;
-      color: #4b7c4f;
-      margin-top: 0.5rem;
+      font-weight: 500;
+      color: #f4f8ec;
     }
 
     main {
@@ -48,10 +59,11 @@
     }
 
     h2 {
-      color: #2b552e;
-      border-bottom: 2px solid #c7dfc4;
+      color: var(--green-dark);
+      border-bottom: 3px solid var(--green-light);
       padding-bottom: 0.3rem;
       margin-bottom: 1rem;
+      font-weight: 600;
     }
 
     ul {
@@ -63,41 +75,39 @@
       display: flex;
       justify-content: space-between;
       padding: 0.4rem 0;
-      border-bottom: 1px dashed #ddd;
+      border-bottom: 1px dashed #cfd8c3;
     }
 
     .btn {
       display: inline-block;
-      background-color: #4b7c4f;
-      color: white;
+      background-color: var(--green-dark);
+      color: var(--white);
       text-decoration: none;
       padding: 0.7rem 1.2rem;
       border-radius: 8px;
       margin-top: 1rem;
-      transition: background-color 0.2s;
+      transition: background-color 0.3s ease;
+      font-weight: 600;
     }
 
     .btn:hover {
-      background-color: #3b643e;
+      background-color: var(--green-light);
+      color: var(--green-dark);
     }
 
     .aktion {
-      background-color: #fff2cc;
+      background-color: #f9fbe7;
       padding: 1.5rem;
-      border-left: 6px solid #e6b800;
+      border-left: 6px solid var(--green-light);
       border-radius: 8px;
     }
 
-    .kontakt p {
-      margin: 0.3rem 0;
-    }
-
     footer {
-      background-color: #f3f3f3;
+      background-color: var(--green-dark);
+      color: var(--white);
       text-align: center;
       padding: 2rem 1rem;
       font-size: 0.95rem;
-      color: #555;
     }
 
     footer img {
@@ -118,6 +128,18 @@
         margin-top: 0.2rem;
       }
     }
+
+    /* Platzhalter für Bilder */
+    .bildbereich {
+      text-align: center;
+      margin: 2rem 0;
+    }
+
+    .bildbereich img {
+      max-width: 100%;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
   </style>
 </head>
 <body>
@@ -132,6 +154,8 @@
       <p>Unser Süssmost wird aus ungespritzten Äpfeln gewonnen – direkt von unseren Bäumen, ohne chemische Behandlung. 
       Der pure Geschmack der Natur – ideal für die ganze Familie.</p>
     </section>
+
+    <div class="bildbereich"><img src="img/apples.jpg" alt="Frische Äpfel"></div>
 
     <section>
       <h2>Preise – Ernte 2025</h2>
