@@ -123,6 +123,25 @@
       margin: 0.2rem 0;
     }
 
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 15px;
+    }
+
+    .gallery img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+      transition: transform 0.3s;
+      cursor: pointer;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.05);
+    }
+
     @media (max-width: 600px) {
       li {
         flex-direction: column;
@@ -188,7 +207,12 @@
       Ab CHF 50.– Bestellwert (zzgl. Kilometerentschädigung)</p>
     </section>
 
-    <div class="image"><img src="img/aepfel.jpg" alt="Frische Äpfel"></div>
+    <div class="gallery">
+      <img src="img/aepfel.jpg" alt="Frische Äpfel">
+      <img src="img/baumbaum_1.jpeg" alt="Frische Äpfel">
+      <img src="img/baumbaum_2.jpeg" alt="Frische Äpfel">
+      <img src="img/baumbaum_3.jpeg" alt="Frische Äpfel">
+    </div>
 
     <section>
       <h2>Jetzt bestellen!</h2>
