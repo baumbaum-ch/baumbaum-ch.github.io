@@ -125,76 +125,25 @@
 
     .gallery {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 15px;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      margin: 3rem auto;
+      max-width: 1000px;
+      padding: 0 1rem;
     }
 
-    .gallery {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 15px;
-    }
-
-    .gallery a img {
+    .gallery img {
       width: 100%;
-      height: auto;
-      border-radius: 10px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.15);
-      transition: transform 0.3s;
+      height: 230px;
+      object-fit: cover; /* sorgt für einheitliche Höhe und Beschnitt */
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
 
-    .gallery a img:hover {
-      transform: scale(1.05);
-    }
-
-    /* Lightbox-Stil */
-    .lightbox {
-      display: none;
-      position: fixed;
-      z-index: 999;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(0,0,0,0.8);
-      justify-content: center;
-      align-items: center;
-    }
-
-    .lightbox img {
-      max-width: 90%;
-      max-height: 80%;
-      border-radius: 10px;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.5);
-    }
-
-    /* Schließen durch Klick */
-    .lightbox:target {
-      display: flex;
-    }
-
-    .lightbox:target img {
-      animation: zoom 0.3s ease;
-    }
-
-    @keyframes zoom {
-      from { transform: scale(0.8); opacity: 0; }
-      to { transform: scale(1); opacity: 1; }
-    }
-
-    /* Schließen-Button */
-    .close {
-      position: absolute;
-      top: 20px;
-      right: 30px;
-      color: white;
-      text-decoration: none;
-      font-size: 2rem;
-      font-weight: bold;
-    }
-
-    .close:hover {
-      color: #ccc;
+    .gallery img:hover {
+      transform: scale(1.04);
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
     }
 
     @media (max-width: 600px) {
@@ -263,30 +212,9 @@
     </section>
 
     <div class="gallery">
-      <a href="#bild1"><img src="img/aepfel.jpg" alt="Frische Äpfel"></a>
-      <a href="#bild2"><img src="img/baumbaum_1.jpeg" alt="Frische Äpfel"></a>
-      <a href="#bild2"><img src="img/baumbaum_2.jpeg" alt="Frische Äpfel"></a>
-      <a href="#bild2"><img src="img/baumbaum_3.jpeg" alt="Frische Äpfel"></a>
-    </div>
-
-    <!-- Lightboxen -->
-    <div class="lightbox" id="bild1">
-      <a href="#" class="close">&times;</a>
       <img src="img/aepfel.jpg" alt="Frische Äpfel">
-    </div>
-
-    <div class="lightbox" id="bild2">
-      <a href="#" class="close">&times;</a>
       <img src="img/baumbaum_1.jpeg" alt="Frische Äpfel">
-    </div>
-
-    <div class="lightbox" id="bild3">
-      <a href="#" class="close">&times;</a>
       <img src="img/baumbaum_2.jpeg" alt="Frische Äpfel">
-    </div>
-
-    <div class="lightbox" id="bild4">
-      <a href="#" class="close">&times;</a>
       <img src="img/baumbaum_3.jpeg" alt="Frische Äpfel">
     </div>
 
