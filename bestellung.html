@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bestellung – baumbaum.ch</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style/style.css">
+</head>
+<body>
+
+<header>
+  <a href="index.html">
+    <img src="img/logo_baumbaum.png" alt="Logo">
+  </a>
+  <h1>Süssmost von ungespritzten Bäumen</h1>
+  <p>Natürlich. Fruchtig. Regional.</p>
+</header>
+
+<main>
+  <p>Bitte fülle das Formular aus, um deine Bestellung aufzugeben.</p>
+  <h2>Persönliche Angaben</h2>
+
+  <form action="https://api.web3forms.com/submit" method="POST" id="bestellung">
+    <input type="hidden" name="access_key" value="22c8b2d8-0b62-4b21-a2db-579efd2da4cd">
+    <input type="hidden" name="redirect" value="https://baumbaum.ch/danke.html">
+    <label for="name">Vorname & Name *</label>
+    <input id="name" name="Name" required>
+
+    <label for="adresse">Adresse *</label>
+    <input id="adresse" name="Adresse" required>
+
+    <label for="plz">PLZ / Ort *</label>
+    <input id="plz" name="PLZOrt" required>
+
+    <label for="telefon">Telefon *</label>
+    <input id="telefon" name="Telefon" required>
+
+    <label for="email">E-Mail *</label>
+    <input id="email" name="Email" required type="email">
+
+    <h2>Produkte</h2>
+    <div class="product-row">
+      <span>10 l Bag-in-Box (CHF 25.–)</span>
+      <input type="number" name="BagInBox-10L" min="0" value="0">
+    </div>
+
+    <div class="product-row">
+      <span>5 l Bag-in-Box (CHF 14.–)</span>
+      <input type="number" name="BagInBox-5L" min="0" value="0">
+    </div>
+
+    <div class="product-row">
+      <span>3 l Stehbeutel (CHF 9.–)</span>
+      <input type="number" name="Stehbeutel-3L" min="0" value="0">
+    </div>
+
+    <div class="product-row">
+      <span>1 l PET (CHF 4.–)</span>
+      <input type="number" name="PET-1L" min="0" value="0">
+    </div>
+
+    <div class="product-row">
+      <span>0,5 l PET (CHF 3.–)</span>
+      <input type="number" name="PET-5DL" min="0" value="0">
+    </div>
+
+    <h2>Abholung / Lieferung</h2>
+
+    <label for="lieferung">Gewünschte Option *</label>
+    <select id="lieferung" name="lieferung" required>
+      <option value="">Bitte wählen</option>
+      <option value="Abholung">Abholung</option>
+      <option value="Lieferung">Lieferung</option>
+    </select>
+
+    <label for="bemerkungen">Bemerkungen</label>
+    <textarea id="bemerkungen" name="bemerkungen" rows="4" placeholder="z.B. gewünschter Abholtermin"></textarea>
+
+    <button type="submit" class="btn">Bestellung absenden</button>
+  </form>
+
+</main>
+
+<footer>
+  <img src="img/logo_baumbaum.png" alt="Logo">
+  <p><strong>Kontakt & Adresse</strong></p>
+  <p>Sonja & Urs Baumann</p>
+  <p>Haspel 161<br>8580 Hagenwil</p>
+  <p>T: 071 411 14 01 · M: 079 466 72 85</p>
+  <p>© 2025 – Süssmost aus ungespritzten Äpfeln</p>
+</footer>
+
+</body>
+</html>
